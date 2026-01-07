@@ -1,0 +1,74 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="about-section">
+
+    <!-- TOP LABEL -->
+    <div class="about-header">
+        <span class="section-label">ABOUT US</span>
+        <h1>Trusted Truck Repair & Welding Experts</h1>
+        <p>
+            Built on experience, driven by quality, and trusted by truck owners
+            across Mumbai.
+        </p>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="about-container">
+
+        <!-- LEFT TEXT -->
+        <div class="about-text">
+            <h2>Who We Are</h2>
+            <p>
+                TruckPro Garage is a professional truck repair, welding, and
+                fabrication workshop dedicated to keeping heavy-duty vehicles
+                running safely and efficiently.
+            </p>
+
+            <p>
+                From emergency repairs to custom fabrication and fleet
+                maintenance, we focus on durability, safety, and long-term
+                performance.
+            </p>
+
+            <div class="about-highlights">
+                <div class="highlight-box">
+                    <strong>20+ Years</strong>
+                    <span>Industry Experience</span>
+                </div>
+
+                <div class="highlight-box">
+                    <strong>500+</strong>
+                    <span>Trucks Repaired</span>
+                </div>
+
+                <div class="highlight-box">
+                    <strong>24/7</strong>
+                    <span>Emergency Support</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT CARD -->
+        <div class="about-card">
+            <h3>Why TruckPro Garage?</h3>
+
+            <ul>
+                <li>✔ Skilled welders & technicians</li>
+                <li>✔ Heavy-duty tools & equipment</li>
+                <li>✔ Honest pricing & quick turnaround</li>
+                <li>✔ Emergency roadside assistance</li>
+            </ul>
+
+            <a href="{% url 'contact' %}" class="btn-primary">
+                Get a Free Quote
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

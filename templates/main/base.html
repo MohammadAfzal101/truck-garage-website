@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TruckPro Garage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/hero.css' %}">
+    <link rel="stylesheet" href="{% static 'css/our_services.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/services.css' %}">
+    <link rel="stylesheet" href="{% static 'css/recent-work.css' %}">
+    <link rel="stylesheet" href="{% static 'css/why-us.css' %}">
+    <link rel="stylesheet" href="{% static 'css/video.css' %}">
+    <link rel="stylesheet" href="{% static 'css/location.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+    
+
+
+    <!--<link rel="stylesheet" href="{% static 'css/contact.css' %}">-->
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+
+
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+    <div class="header-container">
+        <div class="logo">
+    <img src="{% static 'images/truck-logo.png' %}" alt="TruckPro Garage">
+    <div class="logo-text">
+        <strong>TRUCKPRO</strong>
+        <small>Garage & Welding</small>
+    </div>
+    </div>
+       <nav class="nav-menu">
+    <a href="{% url 'home' %}"
+       class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+       Home
+    </a>
+
+    <a href="{% url 'services' %}"
+       class="{% if request.resolver_match.url_name == 'services' %}active{% endif %}">
+        Services
+    </a>
+
+    <a href="{% url 'gallery' %}"
+       class="{% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">
+        Gallery
+    </a>
+
+     <a href="{% url 'about' %}"
+       class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+        About Us
+    </a>
+
+    <a href="{% url 'contact' %}"
+       class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+       Contact
+    </a>
+</nav>
+
+<a href="{% url 'contact' %}" class="btn-primary">Get a Quote</a>
+
+</div>
+</header>
+
+{% block content %}{% endblock %}
+
+<!-- ===== CTA SECTION ===== -->
+<section class="cta-section">
+    <h2>Ready to Get Started?</h2>
+    <p>Contact us today for a free quote on your truck repair or welding project.</p>
+    <a href="{% url 'contact' %}" class="btn-primary">Request a Quote</a>
+
+</section>
+
+<!-- ===== FOOTER ===== -->
+<!-- ===== FOOTER ===== -->
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <!-- ABOUT -->
+        <div class="footer-col">
+            <h4>About TruckPro</h4>
+            <p class="footer-desc">
+                Your one-stop shop for expert truck repair and welding services.
+                Trusted by fleet owners and drivers for reliable workmanship.
+            </p>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="/">Home</a>
+            <a href="/services/">Services</a>
+            <a href="/gallery/">Gallery</a>
+            <a href="/about/">About Us</a>
+        </div>
+
+        <!-- SERVICES -->
+        <div class="footer-col">
+            <h4>Services</h4>
+            <a href="#">Truck Repair</a>
+            <a href="#">Welding</a>
+            <a href="#">Body Repair</a>
+            <a href="#">Emergency Repairs</a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-col">
+            <h4>Contact</h4>
+
+            <div class="contact-item">
+                <!-- Location -->
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 21s8-7 8-11a8 8 0 10-16 0c0 4 8 11 8 11z"
+                          stroke="currentColor" stroke-width="2"/>
+                    <circle cx="12" cy="10" r="3"
+                            stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Wadi Bunder Traffic Police Station</span>
+            </div>
+
+            <div class="contact-item">
+                <!-- Phone -->
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M22 16.9v3a2 2 0 01-2.2 2
+                             19.8 19.8 0 01-8.6-3
+                             19.5 19.5 0 01-6-6
+                             19.8 19.8 0 01-3-8.6
+                             A2 2 0 014.1 3h3
+                             a2 2 0 012 1.7
+                             c.1.9.3 1.8.6 2.6
+                             a2 2 0 01-.4 2.1L8.1 10.9
+                             a16 16 0 006 6l1.5-1.2
+                             a2 2 0 012.1-.4
+                             c.8.3 1.7.5 2.6.6
+                             a2 2 0 012.1 2z"
+                          stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>7039475132</span>
+            </div>
+
+            <div class="contact-item">
+                <!-- Email -->
+                <svg viewBox="0 0 24 24" fill="none">
+                    <rect x="2" y="4" width="20" height="16" rx="2"
+                          stroke="currentColor" stroke-width="2"/>
+                    <path d="M22 6l-10 7L2 6"
+                          stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>superfix.truckgarage@gmail.com</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+        © 2026 TruckPro Garage. All rights reserved.
+    </div>
+</footer>
+
+</body>
+</html>

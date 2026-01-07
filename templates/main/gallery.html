@@ -1,0 +1,70 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="gallery-section">
+
+    <!-- HEADER -->
+    <div class="gallery-header">
+        <span class="section-label">OUR RECENT WORK</span>
+        <h1>Real Projects. Real Results.</h1>
+        <p>
+            A selection of truck repair, welding, fabrication, and body work
+            completed by our experienced team.
+        </p>
+    </div>
+
+    <!-- GRID -->
+    <div class="gallery-container">
+        <div class="gallery-grid">
+
+            <!-- CARD -->
+            <div class="gallery-card">
+                <a href="{% static 'images/gallery/work-2.png' %}" class="lightbox">
+                <img src="{% static 'images/gallery/work-2.png' %}" alt="Truck Repair Work">
+                </a>
+                <span class="gallery-tag">Truck Repair</span>
+            </div>
+
+            <div class="gallery-card">
+                <a href="{% static 'images/gallery/work-3.png' %}" class="lightbox">
+                <img src="{% static 'images/gallery/work-3.png' %}" alt="Welding Work">
+                </a>
+                <span class="gallery-tag">Welding</span>
+            </div>
+
+            <div class="gallery-card">
+                <a href="{% static 'images/gallery/work-6.png' %}" class="lightbox">
+                <img src="{% static 'images/gallery/work-6.png' %}" alt="Fabrication Work">
+                </a>
+                <span class="gallery-tag">Fabrication</span>
+            </div>
+
+            <div class="gallery-card">
+                <a href="{% static 'images/gallery/work-1.png' %}" class="lightbox">
+                <img src="{% static 'images/gallery/work-1.png' %}" alt="Body Repair">
+                </a>
+                <span class="gallery-tag">Body Repair</span>
+            </div>
+
+            <div class="gallery-card">
+                <a href="{% static 'images/gallery/work-4.png' %}" class="lightbox">
+                <img src="{% static 'images/gallery/work-4.png' %}" alt="Truck Modification">
+                </a>
+                <span class="gallery-tag">Modification</span>
+            </div>
+
+            <div class="gallery-card">
+                <a href="{% static 'images/gallery/work-5.png' %}" class="lightbox">
+                <img src="{% static 'images/gallery/work-5.png' %}" alt="Metal Work">
+                </a>
+                <span class="gallery-tag">Metal Work</span>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}
