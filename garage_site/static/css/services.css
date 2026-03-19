@@ -1,0 +1,183 @@
+/* ===== SERVICES SECTION ===== */
+
+/* ===============================
+   SERVICES SECTION
+================================ */
+
+.services-section {
+    background: #f9fafb;
+    padding: 100px 20px 80px;
+}
+
+/* ---------- HEADER ---------- */
+.services-header {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-label {
+    color: #f5b400;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.section-label::before,
+.section-label::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: #f5b400;
+    display: inline-block;
+    margin: 0 10px 4px;
+}
+
+.services-header h1 {
+    font-size: 42px;
+    margin-bottom: 14px;
+    color: #111;
+}
+
+.services-header p {
+    font-size: 17px;
+    color: #555;
+}
+
+/* ---------- SERVICES GRID ---------- */
+.services-grid {
+    max-width: 1200px;
+    margin: 70px auto 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+/* ---------- SERVICE CARD ---------- */
+.service-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 28px;
+    border: 1px solid #ececec;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: #f5b400;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Icon */
+.service-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    background: rgba(245, 180, 0, 0.15);
+    color: #f5b400;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.service-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ===============================
+   TRUST BAR
+================================ */
+
+.services-trust-bar {
+    margin-top: 60px;
+    padding: 40px;
+    background: linear-gradient(180deg, #1b1b1b, #111);
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* Trust Item */
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.3s ease;
+}
+
+.trust-item:hover {
+    border-color: #f5b400;
+    transform: translateY(-4px);
+    box-shadow: 0 0 0 1px rgba(245,180,0,0.4);
+}
+
+/* Trust Icon */
+.trust-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(245, 180, 0, 0.2);
+    color: #f5b400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+/* Trust Text */
+.trust-text strong {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.trust-text p {
+    color: #cccccc;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1000px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .services-trust-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .services-trust-bar {
+        grid-template-columns: 1fr;
+    }
+
+    .services-header h1 {
+        font-size: 32px;
+    }
+}

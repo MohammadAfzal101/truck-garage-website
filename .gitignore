@@ -41,3 +41,15 @@ db.sqlite3
 
 # My environment
 myenv/
+db.sqlite3
+
+# Virtual environment
+myenv/
+
+# Environment variables
+.env
+
+# OS junk
+.DS_Store
+Thumbs.db
+>>>>>>> cbc7389bec8d76ffc3658b387f39ee99253c2b86

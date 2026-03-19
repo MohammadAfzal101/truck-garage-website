@@ -1,0 +1,277 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/hero.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-container">
+
+        <!-- LEFT -->
+        <div class="hero-content">
+            <span class="hero-badge">Trusted Since 2000</span>
+
+            <h1>
+                Keeping Your<br>
+                Trucks Running<br>
+                <span>Strong</span>
+            </h1>
+
+            <p>
+                Expert truck repair, welding, and maintenance services.
+                Fast, reliable, and honest. We get you back on the road.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="/services/" class="btn-primary">View Services</a>
+                <a href="{% url 'contact' %}" class="btn-primary">Get a Quote</a>
+
+            </div>
+
+            <div class="hero-stats">
+                <div><strong>20+</strong><span>Years Experience</span></div>
+                <div><strong>500+</strong><span>Happy Clients</span></div>
+                <div><strong>24/7</strong><span>Emergency Service</span></div>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="hero-image">
+            <img src="{% static 'images/hero-truck.png' %}" alt="Truck Repair">
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== OUR CORE SERVICES ===== -->
+<section class="home-services">
+    <div class="home-services-container">
+
+        <div class="home-services-header">
+            <span class="section-label">WHAT WE DO</span>
+            <p class="services-intro">
+                Comprehensive solutions for all types of truck repair, welding, fabrication,
+                and custom modifications.
+            </p>
+            <h2>Our Core Services</h2>
+        </div>
+
+        <div class="home-services-grid">
+
+            <div class="home-service-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-truck"></i>
+                </div>
+                <h3>General Truck Repair</h3>
+                <p>From engine diagnostics to brake systems, we handle all major and minor truck repairs to ensure safety, reliability, and performance.</p>
+            </div>
+
+            <div class="home-service-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                </div>
+                <h3>Welding & Metal Fabrication</h3>
+                <p>Expert welding and metal fabrication services for frames, chassis, reinforcements, and custom structural requirements.</p>
+            </div>
+
+            <div class="home-service-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-hammer"></i>
+                </div>
+                <h3>Body Repair & Modifications</h3>
+                <p>Complete body repair solutions including dent removal, panel work, alignment, and custom truck modifications.</p>
+            </div>
+
+            <div class="home-service-card">
+                <div class="icon-box">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+                <h3>Fleet & Preventive Maintenance</h3>
+                <p>Preventive maintenance programs and emergency support designed to reduce downtime and extend vehicle life.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ===== RECENT WORK ===== -->
+
+<section class="recent-work">
+    <div class="container">
+
+        <h2>Our <span class="accent">Recent</span> Work</h2>
+        <p class="section-subtitle">
+            A glimpse into the quality and craftsmanship we deliver every day.
+        </p>
+
+        <div class="work-grid">
+            <div class="work-card">
+                <img src="{% static 'images/gallery/work-1.png' %}" alt="Truck Repair Work">
+            </div>
+            <div class="work-card">
+                <img src="{% static 'images/gallery/work-2.png' %}" alt="Welding Work">
+            </div>
+            <div class="work-card">
+                <img src="{% static 'images/gallery/work-3.png' %}" alt="Engine Repair">
+            </div>
+            <div class="work-card">
+                <img src="{% static 'images/gallery/work-4.png' %}" alt="Fabrication Work">
+            </div>
+        </div>
+
+        <div class="gallery-btn">
+            <a href="/gallery/" class="btn-primary">View Full Gallery</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="why-us">
+    <div class="why-us-container">
+
+        <div class="why-us-header">
+            <span class="section-label">WHY CHOOSE US</span>
+            <h2>Trusted Truck Repair & Welding Experts</h2>
+            <p>
+                We focus on quality workmanship, honest service, and long-term
+                reliability for every truck we handle.
+            </p>
+        </div>
+
+        <div class="why-us-grid">
+
+            <div class="why-card">
+                <i class="fa-solid fa-medal"></i>
+                <h3>20+ Years Experience</h3>
+                <p>Decades of hands-on expertise in truck repair, welding, and fabrication.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-tools"></i>
+                <h3>Skilled & Certified Work</h3>
+                <p>Professional-grade tools and skilled workmanship for every job.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-clock"></i>
+                <h3>Fast Turnaround</h3>
+                <p>We value your time and get your truck back on the road quickly.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fa-solid fa-headset"></i>
+                <h3>24/7 Emergency Support</h3>
+                <p>Breakdowns don’t wait — and neither do we.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== VIDEO SECTION ===== -->
+
+<section class="video-section">
+
+    <!-- SMALL CENTER LABEL -->
+    <div class="video-top">
+        <span class="section-label">WORK IN ACTION</span>
+    </div>
+
+    <!-- MAIN GRID -->
+    <div class="video-container video-grid">
+
+        <!-- LEFT TEXT -->
+        <div class="video-text">
+            <h2>See Our Work<br>on Real Trucks</h2>
+
+            <p class="video-intro">
+                Watch how we handle real-world truck repair, welding,
+                and fabrication projects with precision and care.
+            </p>
+
+            <p>
+                From heavy-duty repairs to precision welding and custom fabrication,
+                our team delivers real results on real trucks every day.
+            </p>
+
+            <a href="/gallery/" class="btn-primary">View More Work</a>
+        </div>
+
+        <!-- RIGHT VIDEO -->
+        <div class="video-box">
+            <a href="https://youtube.com/shorts/I-Lrfa9znK0"
+               target="_blank"
+               class="youtube-link">
+
+                <div class="video-frame">
+                    <img src="{% static 'images/video-thumb.jpg' %}" alt="Work Video">
+                    <span class="play-btn">▶</span>
+                </div>
+
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== LOCATION SECTION ===== -->
+<section class="location-section">
+
+    <!-- TOP CENTER LABEL -->
+    <div class="location-top">
+        <span class="section-label">OUR LOCATION</span>
+    </div>
+
+    <!-- MAIN GRID -->
+    <div class="location-container location-grid">
+
+        <!-- LEFT TEXT -->
+        <div class="location-text">
+            <h2>Visit Our Truck Garage</h2>
+
+            <p class="location-intro">
+                Conveniently located and easy to reach for all truck repair,
+                welding, and fabrication needs.
+            </p>
+
+            <p>
+                Our workshop is fully equipped to handle heavy-duty trucks,
+                emergency repairs, and custom fabrication work.
+            </p>
+
+            <ul class="location-details">
+                <li><strong>Address:</strong> Your Garage Address Here</li>
+                <li><strong>Phone:</strong> +91 XXXXX XXXXX</li>
+                <li><strong>Hours:</strong> Mon–Sat: 9 AM – 7 PM</li>
+            </ul>
+
+            <a href="https://maps.google.com" target="_blank" class="btn-primary">
+                Get Directions
+            </a>
+        </div>
+
+        <!-- RIGHT MAP -->
+        <div class="location-map">
+            <iframe
+                src="https://www.google.com/maps?q=Your+Location+Here&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+{% endblock %}

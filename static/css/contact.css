@@ -1,0 +1,146 @@
+/* SECTION */
+.contact-info-section {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    background: #f6f7f9;
+}
+
+/* CARD */
+.contact-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 50px 40px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* LABEL */
+.section-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #f5b400;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+/* TITLE */
+.contact-card h2 {
+    font-size: 30px;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+/* DESCRIPTION */
+.contact-desc {
+    font-size: 15px;
+    color: #666;
+    max-width: 360px;
+    margin: 0 auto 34px;
+    line-height: 1.6;
+}
+
+/* INFO LIST */
+.contact-info-list {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+/* INFO ROW */
+.contact-info-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+/* ICON BOX */
+.icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(245, 180, 0, 0.15);
+    color: #f5b400;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2px; /* 🔥 MAGIC LINE */
+}
+
+
+.icon-box svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* TEXT */
+.contact-info-row h4 {
+    font-size: 15px;
+    color: #111;
+    margin-bottom: 2px;
+}
+
+.contact-info-row p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+.info-text h4 {
+    font-size: 15px;
+    color: #111;
+    margin: 0 0 2px;   /* 🔥 remove default margins */
+    line-height: 1.2;
+}
+
+.info-text p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;        /* 🔥 remove default margins */
+    line-height: 1.4;
+}
+
+
+
+/* BUTTON */
+.contact-btn {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 14px 36px;
+    background: #f5b400;
+    color: #111;
+    font-weight: 600;
+    border-radius: 14px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.contact-btn:hover {
+    background: #e0a800;
+    transform: translateY(-2px);
+}
+
+
+/* NOTE */
+.contact-note {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+    .contact-card {
+        padding: 40px 24px;
+    }
+}
+
+.contact-info-row:hover .icon-box {
+    background: #f5b400;
+    color: #111;
+}

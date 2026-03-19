@@ -1,0 +1,83 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<section class="contact-info-section">
+
+    <div class="contact-card">
+
+        <span class="section-label">CONTACT DETAILS</span>
+
+        <h2>Contact Information</h2>
+
+        <p class="contact-desc">
+            Reach out to us directly for truck repair, welding, or fabrication services.
+        </p>
+
+        <div class="contact-info-list">
+
+            <!-- Address -->
+            <div class="contact-info-row">
+                <div class="icon-box">
+                    <!-- Location SVG -->
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                              stroke="currentColor" stroke-width="1.8"/>
+                        <circle cx="12" cy="9" r="2.5"
+                                stroke="currentColor" stroke-width="1.8"/>
+                    </svg>
+                </div>
+                <div class="info-text">
+                    <h4>Address</h4>
+                    <p>Wadi Bunder Traffic Police Station,<br> 
+                    Mumbai, Maharashtra</p>
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-info-row">
+                <div class="icon-box">
+                    <!-- Phone SVG -->
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M5 4h4l2 5-2 1c1 2 3 4 5 5l1-2 5 2v4c0 1-1 2-2 2C9 21 3 15 3 6c0-1 1-2 2-2z"
+                              stroke="currentColor" stroke-width="1.8"/>
+                    </svg>
+                </div>
+                <div class="info-text">
+                    <h4>Phone</h4>
+                    <p>+91 7039475132</p>
+                </div>
+            </div>
+
+            <!-- Hours -->
+            <div class="contact-info-row">
+                <div class="icon-box">
+                    <!-- Clock SVG -->
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="9"
+                                stroke="currentColor" stroke-width="1.8"/>
+                        <path d="M12 7v5l3 2"
+                              stroke="currentColor" stroke-width="1.8"/>
+                    </svg>
+                </div>
+                <div class="info-text">
+                    <h4>Working Hours</h4>
+                    <p>Mon–Sat: 9 AM – 7 PM</p>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="tel:+917039475132" class="contact-btn">
+            Call Now
+        </a>
+
+        <p class="contact-note">
+            We usually respond within 24 hours.
+        </p>
+
+    </div>
+
+</section>
+
+
+{% endblock %}
