@@ -5,6 +5,9 @@
 .why-us {
     background: #f9fafb;
     padding: 100px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /* ---------- CONTAINER ---------- */
@@ -95,15 +98,63 @@
 @media (max-width: 900px) {
     .why-us-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .why-us-header h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-us {
+        padding: 50px 15px;
+    }
+
+    .why-us-header h2 {
+        font-size: 28px;
+    }
+
+    .why-us-grid {
+        gap: 15px;
+    }
+
+    .why-card {
+        padding: 20px;
+    }
+
+    .why-card h3 {
+        font-size: 18px;
+    }
+
+    .why-card p {
+        font-size: 14px;
     }
 }
 
 @media (max-width: 600px) {
+    .why-us {
+        padding: 40px 12px;
+    }
+
     .why-us-grid {
         grid-template-columns: 1fr;
     }
 
     .why-us-header h2 {
-        font-size: 30px;
+        font-size: 24px;
+    }
+
+    .why-card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .why-card h3 {
+        font-size: 16px;
+    }
+
+    .why-card p {
+        font-size: 13px;
     }
 }

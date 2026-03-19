@@ -42,42 +42,52 @@
 <header class="site-header">
     <div class="header-container">
         <div class="logo">
-    <img src="{% static 'images/truck-logo.png' %}" alt="TruckPro Garage">
-    <div class="logo-text">
-        <strong>TRUCKPRO</strong>
-        <small>Garage & Welding</small>
+            <img src="{% static 'images/truck-logo.png' %}" alt="TruckPro Garage">
+            <div class="logo-text">
+                <strong>TRUCKPRO</strong>
+                <small>Garage & Welding</small>
+            </div>
+        </div>
+
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu" id="nav-menu">
+            <a href="{% url 'home' %}"
+               class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+               Home
+            </a>
+
+            <a href="{% url 'services' %}"
+               class="{% if request.resolver_match.url_name == 'services' %}active{% endif %}">
+                Services
+            </a>
+
+            <a href="{% url 'gallery' %}"
+               class="{% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">
+                Gallery
+            </a>
+
+            <a href="{% url 'about' %}"
+               class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+                About Us
+            </a>
+
+            <a href="{% url 'contact' %}"
+               class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+               Contact
+            </a>
+
+            <a href="{% url 'contact' %}" class="btn-primary mobile-quote-btn">Get a Quote</a>
+        </nav>
+
+        <a href="{% url 'contact' %}" class="btn-primary desktop-quote-btn">Get a Quote</a>
     </div>
-    </div>
-       <nav class="nav-menu">
-    <a href="{% url 'home' %}"
-       class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">
-       Home
-    </a>
-
-    <a href="{% url 'services' %}"
-       class="{% if request.resolver_match.url_name == 'services' %}active{% endif %}">
-        Services
-    </a>
-
-    <a href="{% url 'gallery' %}"
-       class="{% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">
-        Gallery
-    </a>
-
-     <a href="{% url 'about' %}"
-       class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">
-        About Us
-    </a>
-
-    <a href="{% url 'contact' %}"
-       class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
-       Contact
-    </a>
-</nav>
-
-<a href="{% url 'contact' %}" class="btn-primary">Get a Quote</a>
-
-</div>
 </header>
 
 {% block content %}{% endblock %}
@@ -177,6 +187,35 @@
         © 2026 TruckPro Garage. All rights reserved.
     </div>
 </footer>
+
+<!-- Hamburger Menu Script -->
+<script>
+    const hamburgerBtn = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = navMenu.querySelectorAll('a');
+
+    // Toggle menu on hamburger click
+    hamburgerBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburgerBtn.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            hamburgerBtn.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.hamburger') && !e.target.closest('.nav-menu')) {
+            navMenu.classList.remove('active');
+            hamburgerBtn.classList.remove('active');
+        }
+    });
+</script>
 
 </body>
 </html>

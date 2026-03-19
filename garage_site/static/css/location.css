@@ -2,6 +2,9 @@
 .location-section {
     background: #ffffff;
     padding: 100px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /* TOP LABEL (CENTER LIKE VIDEO) */
@@ -76,23 +79,102 @@
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
+    .location-section {
+        padding: 70px 20px;
+    }
+
+    .location-top {
+        margin-bottom: 40px;
+    }
+
     .location-grid {
-       .location-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        align-items: center;
+    }
 
-    /* 🔥 THIS fixes vertical alignment */
-    align-items: center;
-}
+    .location-text h2 {
+        font-size: 36px;
+        text-align: center;
+    }
 
+    .location-intro {
+        text-align: center;
     }
 
     .location-text p {
         margin: 0 auto 20px;
+        text-align: center;
+    }
+
+    .location-details {
+        text-align: center;
     }
 
     .location-map {
         margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .location-section {
+        padding: 50px 15px;
+    }
+
+    .location-top {
+        margin-bottom: 30px;
+    }
+
+    .location-text h2 {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .location-intro {
+        font-size: 15px;
+    }
+
+    .location-text p {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .location-details li {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .location-map iframe {
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .location-section {
+        padding: 40px 12px;
+    }
+
+    .location-text h2 {
+        font-size: 24px;
+    }
+
+    .location-intro {
+        font-size: 14px;
+    }
+
+    .location-text p {
+        font-size: 13px;
+    }
+
+    .location-details li {
+        font-size: 13px;
+    }
+
+    .location-map {
+        border-radius: 12px;
+    }
+
+    .location-map iframe {
+        height: 240px;
     }
 }

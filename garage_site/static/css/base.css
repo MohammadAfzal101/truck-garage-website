@@ -1,9 +1,21 @@
 /* ===== GLOBAL ===== */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
     background: #ffffff;
     color: #1c1c1c;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -14,6 +26,9 @@ a {
 .site-header {
     background: #1c1c1c;
     height: 110px;              /* FIXED HEADER HEIGHT */
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .header-container {
@@ -57,15 +72,74 @@ a {
     margin-left: 6px;
 }
 
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 12px 8px;
+    gap: 6px;
+    z-index: 1001;
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.hamburger span {
+    width: 26px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+}
+
+.hamburger:hover span {
+    background: #f5b400;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 9px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* ===== NAVIGATION MENU ===== */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .nav-menu a {
     color: #ffffff;
     margin: 0 15px;
     font-weight: 500;
+    transition: 0.3s ease;
 }
 
 .nav-menu a.active,
 .nav-menu a:hover {
     color: #f5b400;
+}
+
+/* Hide mobile quote button on desktop */
+.mobile-quote-btn {
+    display: none;
+}
+
+/* Show desktop quote button */
+.desktop-quote-btn {
+    display: inline-block;
 }
 
 .btn-quote {
@@ -82,6 +156,9 @@ a {
     color: #ffffff;
     text-align: center;
     padding: 70px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .cta-section h2 {
@@ -109,6 +186,9 @@ a {
     color: #ccc;
     padding: 50px 20px 0;
     font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /* ================= GRID ================= */
@@ -186,10 +266,101 @@ a {
 }
 
 /* =====================================================
-   GLOBAL MOBILE FIXES (APPLY ONCE)
+   MOBILE RESPONSIVENESS
    ===================================================== */
 @media (max-width: 768px) {
+    /* Header */
+    .site-header {
+        height: auto;
+        padding: 10px 0;
+    }
 
+    .header-container {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+        justify-content: space-between;
+    }
+
+    .logo {
+        flex: 1;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .logo-text strong {
+        font-size: 16px;
+    }
+
+    .logo-text small {
+        font-size: 10px;
+    }
+
+    /* Show hamburger menu on mobile */
+    .hamburger {
+        display: flex;
+        order: 2;
+    }
+
+    /* Mobile nav menu */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #1c1c1c;
+        flex-direction: column;
+        padding: 100px 20px 20px;
+        gap: 10px;
+        overflow-y: auto;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu a {
+        margin: 0;
+        padding: 15px 12px;
+        font-size: 16px;
+        display: block;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+
+    /* Hide desktop quote button */
+    .desktop-quote-btn {
+        display: none;
+    }
+
+    /* Show mobile quote button */
+    .mobile-quote-btn {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        padding: 14px 12px;
+        font-size: 16px;
+        border-bottom: none !important;
+    }
+
+    .btn-primary,
+    .btn-quote {
+        padding: 12px 16px;
+        font-size: 14px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Global */
     body {
         overflow-x: hidden;
     }
@@ -205,21 +376,20 @@ a {
     }
 
     h2 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     h3 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     p {
-        font-size: 15px;
-        line-height: 1.6;
+        font-size: 14px;
+        line-height: 1.5;
     }
 
     .container,
-    .wrapper,
-    .footer-container {
+    .wrapper {
         width: 100%;
         max-width: 100%;
     }
@@ -227,5 +397,127 @@ a {
     img {
         max-width: 100%;
         height: auto;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 40px 20px;
+    }
+
+    .cta-section h2 {
+        font-size: 24px;
+    }
+
+    .cta-section p {
+        font-size: 15px;
+    }
+
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-col h4 {
+        font-size: 15px;
+    }
+
+    .footer-desc {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        padding: 15px;
+        font-size: 12px;
+    }
+}
+
+/* Tablet Devices */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .logo img {
+        height: 75px;
+    }
+
+    .nav-menu a {
+        margin: 0 10px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+    .site-header {
+        padding: 8px 0;
+    }
+
+    .header-container {
+        padding: 10px 10px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .logo-text strong {
+        font-size: 14px;
+    }
+
+    .logo-text small {
+        font-size: 9px;
+    }
+
+    .hamburger span {
+        width: 22px;
+        height: 2.5px;
+    }
+
+    .nav-menu {
+        padding: 80px 15px 20px;
+    }
+
+    .nav-menu a {
+        font-size: 15px;
+        padding: 14px 10px;
+    }
+
+    .mobile-quote-btn {
+        margin-top: 15px;
+        padding: 12px 10px;
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .cta-section {
+        padding: 30px 15px;
+    }
+
+    .cta-section h2 {
+        font-size: 20px;
+    }
+
+    .btn-primary,
+    .btn-quote {
+        padding: 10px 16px;
+        font-size: 13px;
     }
 }

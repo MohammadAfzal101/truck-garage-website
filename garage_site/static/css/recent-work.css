@@ -3,6 +3,9 @@
     background: #3a3a3a;
     padding: 80px 20px;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .accent {
@@ -67,15 +70,38 @@
 @media (max-width: 1024px) {
     .work-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .recent-work {
+        padding: 50px 15px;
+    }
+
+    .recent-work h2 {
+        font-size: 28px;
+    }
+
+    .work-grid {
+        gap: 15px;
     }
 }
 
 @media (max-width: 600px) {
+    .recent-work {
+        padding: 40px 12px;
+    }
+
     .work-grid {
         grid-template-columns: 1fr;
     }
 
     .recent-work h2 {
-        font-size: 32px;
+        font-size: 24px;
+    }
+
+    .gallery-btn {
+        margin-top: 30px;
     }
 }

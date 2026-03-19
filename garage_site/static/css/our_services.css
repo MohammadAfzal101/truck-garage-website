@@ -2,6 +2,9 @@
 .home-services {
     background: #ffffff;
     padding: 90px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .home-services-container {
@@ -84,6 +87,31 @@
 @media (max-width: 1000px) {
     .home-services-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .icon-box {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-services-grid {
+        gap: 15px;
+    }
+
+    .home-services-header h2 {
+        font-size: 28px;
+    }
+
+    .home-services-card h3 {
+        font-size: 18px;
+    }
+
+    .home-services-card p {
+        font-size: 14px;
     }
 }
 
@@ -93,6 +121,21 @@
     }
 
     .home-services-header h2 {
-        font-size: 28px;
+        font-size: 24px;
+    }
+
+    .icon-box {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+
+    .home-services-card h3 {
+        font-size: 16px;
+    }
+
+    .home-services-card p {
+        font-size: 13px;
     }
 }
